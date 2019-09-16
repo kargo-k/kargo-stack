@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Roboto&display=swap');
+
+header {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+body {
+  color: #000000e7;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: #0097A7;
+}
+
+a:hover {
+  color: #FFAB40;
+  bacground-color: #EEFF41;
+}
+
+a:visited {
+  color: #595959;
+}
