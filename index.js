@@ -6,7 +6,7 @@ DATA = {
   "projects": [
     {
       "title": "Capsule Curate",
-      "summary": "Single page web application for building and visualizing capsule wardrobes, it is a tool for users to select and pair items to wear as well as suggests an OOTD (outfit of the day) to wear, based on the weather forecast.",
+      "summary": "Single page web application for building and visualizing capsule wardrobes, it is a tool for users to select and pair items to wear as well as suggests an OOTD (outfit of the day) to wear, based on the weather forecast.  Built using the React.js framework, Capsule Curate includes controlled forms and renders data dynamically and instantly.",
       "bullets": [
         "Engineered Ruby on Rails API backend with ActiveRecord Serializers and JWT Authentication",
         "Designed and built frontend using React.js and SCSS for styling",
@@ -31,7 +31,7 @@ DATA = {
     },
     {
       "title": "Capsule v1",
-      "summary": "Singe page web application for building and visualizing capsule wardrobes.",
+      "summary": "Singe page web application for building and visualizing capsule wardrobes.  The first version of Capsule Curate completed as a paired project using plain JavaScript.",
       "bullets": [
         "Scraped Uniqlo's Women's Apparel website using Nokogiri",
         "Wrote over 1000 lines of vanilla JavaScript with full CRUD functionality"
@@ -159,8 +159,12 @@ right.appendChild(div)
 // --------------------projects section
 // make each project into a div of width vw hide overflow. scrollable like capsule collection. also add button to scroll through?
 let project_section = document.querySelector('div#projects')
+let wrapper = document.createElement('div')
+wrapper.id = 'wrapper'
+project_section.appendChild(wrapper)
 for (let i = 0; i < DATA['projects'].length; i++) {
   prj_div = document.createElement('div')
+  prj_div.className = 'project'
   title = document.createElement('h3')
   title.innerText = DATA['projects'][i]['title']
   summary = document.createElement('p')
@@ -168,7 +172,7 @@ for (let i = 0; i < DATA['projects'].length; i++) {
   summary.className = 'fancy'
   prj_div.appendChild(title)
   prj_div.appendChild(summary)
-  project_section.appendChild(prj_div)
+  wrapper.appendChild(prj_div)
 }
 
 
