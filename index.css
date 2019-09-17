@@ -31,13 +31,16 @@ div#nav h3 {
   color: #B66A6E;
 }
 div.section {
+  padding: 20px;
   height: 100vh;
   display: flex;
   align-items: center;
   background: #fdfbfa;
+  flex-direction: column;
 }
 div:nth-child(2n) {
-  background-color:#B66A6E;
+  background-color:#DBCDC6;
+  flex-direction: row;
 }
 div.left {
   width: 50vw;
@@ -48,15 +51,10 @@ div.left {
   justify-content: center;
   align-items: center;
 }
-div.left:nth-child(2n) {
-  background-color:#B66A6E;
-}
-div.right:nth-child(1n+0) {
-  background-color: #DBCDC6;
-}
 div.right {
   width: 50%;
   height: 100%;
+  max-height: 100vh;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
@@ -70,12 +68,23 @@ div#about img {
 }
 .fancy {
   font-family: 'Playfair Display', serif;
-  font-size: calc(20px + 0.2vh);
+  font-size: calc(16px + 0.2vw);
   line-height: 5vh;
+}
+h1#kargostack {
+  font-size: calc(60px + 0.2vw);
+  text-shadow: 2px 1px #B66A6E;
+}
+h1.stripe {
+  background: #B66A6E;
+  line-height: 4vh;
+  width: 100%;
+  text-align: center;
+  font-size: calc(42px + 0.2vw);
 }
 /* 
 rosy brown #B66A6E
-thistle beight #DBCDC6
+thistle beige #DBCDC6
 black #292425
 MED BROWN #947767
 DARK BROWN #685448

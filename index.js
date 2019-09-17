@@ -2,7 +2,7 @@ DATA = {
   "name": "Karen Go",
   "title": "Software Engineer",
   "location": "Seattle, WA",
-  "about": "Full stack engineer with a natural curiosity and drive for results. With 10 years of product development experience, Karen is transitioning into software to build tools that can change the way people live.",
+  "about": "Full stack engineer with a natural curiosity and drive for results. With 10 years of product development experience in beverage manufacturing, pharmaceuticals, and technology, Karen is transitioning into software to build tools that can change the way people live.",
   "projects": [
     {
       "title": "Capsule Curate",
@@ -122,7 +122,13 @@ left.appendChild(title)
 left.appendChild(loc)
 
 right = about_section.getElementsByClassName('right')[0]
+let div = document.createElement('h1')
+div.innerText = '• • •'
+let div2 = document.createElement('h1')
+div2.innerText = '• • •'
 let blurb = document.createElement('p')
 blurb.className = 'fancy'
 blurb.innerText = DATA['about']
+right.appendChild(div)
 right.appendChild(blurb)
+right.appendChild(div2)
