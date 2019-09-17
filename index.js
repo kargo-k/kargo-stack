@@ -2,7 +2,7 @@ DATA = {
   "name": "Karen Go",
   "title": "Software Engineer",
   "location": "Seattle, WA",
-  "about": "Full stack engineer with a natural curiosity and drive for results. With 10 years of product development experience in beverage manufacturing, pharmaceuticals, and technology, Karen is transitioning into software to build tools that can change the way people live.",
+  "about": "Karen is a full stack engineer with a natural curiosity and drive for results. With 10 years of product development experience in beverage manufacturing, pharmaceuticals, and technology, Karen recently graduated from an accelerated web development program with Flatiron School.  Experienced in Ruby and JavaScript, she is transitioning into software to build tools that can change the way people live.",
   "projects": [
     {
       "title": "Capsule Curate",
@@ -61,7 +61,8 @@ DATA = {
   "education": [
     {
       "school": "Boston University",
-      "course": "Biomedical Engineering, BSc"
+      "course": "Biomedical Engineering, BSc",
+      "dates": "May 2010"
     },
     {
       "school": "Flatiron School",
@@ -109,6 +110,9 @@ DATA = {
   ]
 }
 
+
+//------------- about section
+
 let about_section = document.querySelector('div#about')
 left = about_section.getElementsByClassName('left')[0]
 let name = document.createElement('h2')
@@ -120,15 +124,55 @@ loc.innerText = DATA['location']
 left.appendChild(name)
 left.appendChild(title)
 left.appendChild(loc)
+let link_div = document.createElement('div')
+left.appendChild(link_div)
+
+let li = document.createElement('img')
+li.setAttribute('src', 'linkedin_icon.png')
+li.className = 'icon'
+li.addEventListener('click', () => window.open('https://www.linkedin.com/in/kargo/', '_blank'))
+link_div.appendChild(li)
+let gh = document.createElement('img')
+gh.setAttribute('src', 'github_icon.png')
+gh.className = 'icon'
+gh.addEventListener('click', () => window.open('https://github.com/kargo-k', '_blank'))
+link_div.appendChild(gh)
 
 right = about_section.getElementsByClassName('right')[0]
-let div = document.createElement('h1')
-div.innerText = '• • •'
-let div2 = document.createElement('h1')
-div2.innerText = '• • •'
 let blurb = document.createElement('p')
 blurb.className = 'fancy'
 blurb.innerText = DATA['about']
-right.appendChild(div)
+let div = document.createElement('h1')
+div.innerText = '• • •'
 right.appendChild(blurb)
-right.appendChild(div2)
+right.appendChild(div)
+
+// --------------------projects section
+
+
+
+// --------------------knowledge section
+let knowledge_section = document.querySelector('div#knowledge')
+education = knowledge_section.getElementsByClassName('left')[0]
+let newdiv, h2, h3
+for (let i = 0; i < DATA['education'].length; i++) {
+  newdiv = document.createElement('div')
+  newdiv.className = 'education'
+  h2 = document.createElement('h2')
+  h2.innerText = DATA['education'][i]['course']
+  h3 = document.createElement('h3')
+  h3.innerText = DATA['education'][i]['school'] + " • " + DATA['education'][i]['dates']
+  newdiv.appendChild(h2)
+  newdiv.appendChild(h3)
+  education.appendChild(newdiv)
+}
+
+skills = about_section.getElementsByClassName('right')[0]
+
+
+// --------------------experience section
+
+
+
+
+// --------------------contact section
