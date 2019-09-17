@@ -1,111 +1,81 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 
-h1, h2, h3, span#next {
-  font-family: 'Fjalla One', sans-serif;
+html {
+  scroll-behavior: smooth;
 }
-
 body {
-  color: #000000e7;
-  background-image: url('joanna-kosinska-RE-8WswW95o-unsplash.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 60%;
-  height: 100vh;
-  padding: 20px 20px 20px 20px;
+  color: #292425;
   font-family: 'Roboto', sans-serif;
   font-size: calc(16px + 0.2vw);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-around;
-}
-div {
-  /* background-color:  rgba(236, 232, 230, 0.3);
-  background: -webkit-linear-gradient(to right, rgba(236, 232, 230, 0.3),transparent);
-  background: linear-gradient(to right,  rgba(236, 232, 230, 0.3), transparent); */
-  max-width: 60vw;
-  text-align: right;
-  padding: 10px;
-  border-radius: 3px;
-  justify-content: space-between
-}
-p {
   margin: 0;
-  line-height: 3vh;
 }
-li {
-  text-align: right;
-  margin: 10px;
+h1, h2, h3, h4 {
+  font-family: 'Fjalla One', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
-
-
-div#title {
-  background-color: transparent;
-}
-h1#title {
-  font-size: calc(60px + 2vw);
-  text-align: right;
-  text-shadow: 4px 3px rgba(195, 165, 143, .3);
-}
-div#footer {
-  background: transparent;
-}
-span#next {
-  color: #C3A58F;
-  font-weight: 900;
-  font-size: 30pt;
-  padding: 10px;
-  height: 20px;
-  width: 20px;
-}
-div.title {
+div#nav {
+  position: fixed;
+  height: 5vh;
   display: flex;
-  flex-direction: row;
-  background: rgba(195, 165, 143, 0.5);
+  width: 100%;
+  padding: 10px;
+  background: #292425;
+  background: -webkit-linear-gradient(to left,  #292425aa, #292425);
+  background: linear-gradient(to left,  #292425aa, #292425);
+}
+div#nav h3 {
+  margin: 0;
+  padding: 0;
+  color: #B66A6E;
+}
+div.section {
+  height: 100vh;
+  display: flex;
   align-items: center;
-  text-align: left;
+  background: #fdfbfa;
 }
-div.title h3 {
-  margin: 0;
+div:nth-child(2n) {
+  background-color:#B66A6E;
 }
-div.title div {
-  margin: 0;
-  font-size: calc(12px + 0.2vw);
-  padding: 0 10px;
-  text-align: left;
-}
-div.title button {
-  margin: 1px;
-  font-family: 'Roboto', sans-serif;
-  font-size: calc(10px + 0.2vw);
-  font-weight: 900;
-  color: #515055;
-  border: 1px solid #515055;
-  border-radius: 3px;
-  background: #BBA3B5;
-}
-li {
-  font-size: calc(12px + 0.2vw);
-  text-align: left;
-}
-div.wrapper {
+div.left {
+  width: 50vw;
+  height: 100vh;
+  padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-
-
-/* $color-brass: #CA8D48;
-rgb(202, 141, 72)
-$color-rosy brown: #C3A58F;
-rgb(195, 165, 143)
-$color-blue: #D3D0D6;
-rgb(211, 208, 214)
-$color-gray: #645655;
-/* rgb(100, 86, 85) */
-/* $color-white-smoke: #ECE8E6 ; */ 
-/* rgb(236, 232, 230) 
-purple: #BBA3B5
-RGB code:	R: 187 G: 163 B: 181
-dark gray: #515055  	R: 81 G: 80 B: 85
-*/
+div.left:nth-child(2n) {
+  background-color:#B66A6E;
+}
+div.right:nth-child(1n+0) {
+  background-color: #DBCDC6;
+}
+div.right {
+  width: 50%;
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #292425;
+}
+div#about img {
+  height: 50vh;
+  margin: 20px;
+}
+.fancy {
+  font-family: 'Playfair Display', serif;
+  font-size: calc(20px + 0.2vh);
+  line-height: 5vh;
+}
+/* 
+rosy brown #B66A6E
+thistle beight #DBCDC6
+black #292425
+MED BROWN #947767
+DARK BROWN #685448

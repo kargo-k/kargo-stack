@@ -1,5 +1,8 @@
 DATA = {
-  "header": "Full stack engineer with a natural curiosity and drive for results. With 10 years of product development experience, Karen is transitioning into software to build tools that change the way people live",
+  "name": "Karen Go",
+  "title": "Software Engineer",
+  "location": "Seattle, WA",
+  "about": "Full stack engineer with a natural curiosity and drive for results. With 10 years of product development experience, Karen is transitioning into software to build tools that can change the way people live.",
   "projects": [
     {
       "title": "Capsule Curate",
@@ -106,183 +109,20 @@ DATA = {
   ]
 }
 
-// View 1 - Intro
-let div_title = document.querySelector('div#title')
-let title = document.createElement('h1')
-title.id = 'title'
-div_title.appendChild(title)
-title.innerText = 'kargo stack'
-// title.addEventListener('mouseover', extendTitle)
-// title.addEventListener('mouseleave', shortenTitle)
+let about_section = document.querySelector('div#about')
+left = about_section.getElementsByClassName('left')[0]
+let name = document.createElement('h2')
+name.innerText = DATA['name']
+let title = document.createElement('h2')
+title.innerText = DATA['title']
+let loc = document.createElement('h2')
+loc.innerText = DATA['location']
+left.appendChild(name)
+left.appendChild(title)
+left.appendChild(loc)
 
+right = about_section.getElementsByClassName('right')[0]
 let blurb = document.createElement('p')
-blurb.innerText = 'Karen is a product-focused full stack software engineer with a natural curiosity and drive for results.  With 10 years of product development experience in the beverage, pharmaceutical, and tech industries, she is transitioning into software to build tools that change the way people live.'
-let div_text = document.querySelector('div#text')
-div_text.appendChild(blurb)
-
-let next = document.createElement('span')
-next.innerText = 'projects >>'
-next.id = 'next'
-let footer = document.querySelector('div#footer')
-footer.appendChild(next)
-next.addEventListener('click', projects1)
-
-
-function extendTitle() {
-  title.innerText = 'karen go - full stack software engineer'
-}
-
-function shortenTitle() {
-  title.innerText = 'kargo stack'
-}
-
-function projects1() {
-  let data = DATA['projects']
-  clearDivs('PROJECTS')
-
-  for (let i = 0; i < 2; i++) {
-    formatProject(data[i], div_text)
-  }
-
-  let next = document.createElement('span')
-  next.innerText = 'more >>'
-  next.id = 'next'
-  document.getElementById('footer').appendChild(next)
-  next.addEventListener('click', projects2)
-
-}
-
-function projects2() {
-  let data = DATA['projects']
-  clearDivs('PROJECTS')
-
-  for (let i = 2; i < 5; i++) {
-    formatProject(data[i], div_text)
-  }
-
-  let next = document.createElement('span')
-  next.innerText = 'knowledge >>'
-  next.id = 'next'
-  document.getElementById('footer').appendChild(next)
-  next.addEventListener('click', knowledge)
-}
-
-function knowledge() {
-  clearDivs('knowledge')
-  let div_text = document.getElementById('text')
-
-  let h = document.createElement('h3')
-  h.innerText = `${DATA['education'][0]['course']} - ${DATA['education'][0]['school']}`
-  div_text.appendChild(h)
-
-  h = document.createElement('h3')
-  h.innerText = `${DATA['education'][1]['course']} - ${DATA['education'][1]['school']} (${DATA['education'][1]['dates']})`
-  div_text.appendChild(h)
-
-  h = document.createElement('h3')
-  h.innerText = 'Technical Skills'
-  div_text.appendChild(h)
-
-  let list = ""
-  for (let i = 0; i < DATA['skills'].length; i++) {
-    list = list + DATA['skills'][i] + " • "
-  }
-  let skills = document.createElement('div')
-  skills.innerText = list
-  div_text.appendChild(skills)
-
-  let next = document.createElement('span')
-  next.innerText = 'experience >>'
-  next.id = 'next'
-  document.getElementById('footer').appendChild(next)
-  // next.addEventListener('click', knowledge)
-
-}
-
-function formatProject(project, div_text) {
-  let heading = document.createElement('div')
-  heading.classList = 'title'
-  div_text.appendChild(heading)
-
-  let title = document.createElement('h3')
-  title.innerText = project['title']
-  heading.appendChild(title)
-
-  let summary = document.createElement('div')
-  summary.innerText = project['summary']
-  heading.appendChild(summary)
-
-  let wrapper = document.createElement('div')
-  wrapper.className = 'wrapper'
-  heading.appendChild(wrapper)
-
-  let link
-  if (!!project['github-f']) {
-    link = document.createElement('button')
-    link.innerText = 'GitHub'
-    wrapper.appendChild(link)
-    // add event listener to open github repo
-  }
-
-  if (!!project['github-b']) {
-    link = document.createElement('button')
-    link.innerText = 'GitHub'
-    wrapper.appendChild(link)
-    // add event listener to open github repo
-  }
-
-  if (!!project['app-link']) {
-    link = document.createElement('button')
-    link.innerText = 'App'
-    wrapper.appendChild(link)
-    // add event listener to open github repo
-  }
-
-  if (!!project['demo']) {
-    link = document.createElement('button')
-    link.innerText = 'Demo'
-    wrapper.appendChild(link)
-    // add event listener to open github repo
-  }
-
-  let list = document.createElement('ul')
-  div_text.appendChild(list)
-
-  let bullet
-  for (let i = 0; i < project['bullets'].length; i++) {
-    bullet = document.createElement('li')
-    bullet.innerText = project['bullets'][i]
-    list.appendChild(bullet)
-  }
-}
-
-function clearDivs(title) {
-  // clear existing data
-  let div_title = document.querySelector('div#title')
-  div_title.innerHTML = `<h1>${title}</h1>`
-  let div_text = document.querySelector('div#text')
-  div_text.innerHTML = ""
-  let footer = document.querySelector('div#footer')
-  footer.innerHTML = ""
-}
-
-
-
-// View 3 - Knowledge (Education and Technical Skills)
-
-
-
-
-// View 4 - Past Job Experiences
-
-
-
-
-// Contact Information
-// let contact_div = document.getElementById('contact')
-// let email = document.createElement('button')
-// email.innerText = 'Email'
-// contact_div.appendChild(email)
-// let github = document.createElement('button')
-// github.innerText = 'GitHub'
-// contact_div.appendChild(github)
+blurb.className = 'fancy'
+blurb.innerText = DATA['about']
+right.appendChild(blurb)
