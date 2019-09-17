@@ -66,6 +66,7 @@ DATA = {
       "dates": "Sept 2019"
     }
   ],
+  "skills": ["React.js", "React-Redux", "JavaScript", "HTML/CSS", "Ruby on Rails", "SQL", "PostgreSQL", "MATLAB", "Wireframing and Mockups", "Adobe CS", "CAD (Solidworks)", "LabView", "Git/GitHub", "Gantt Charts", "Risk Analysis", "Agile Methodology", "Design of Experiements"],
   "experience": [
     {
       "title": "Product Engineer",
@@ -163,7 +164,39 @@ function projects2() {
   next.innerText = 'knowledge >>'
   next.id = 'next'
   document.getElementById('footer').appendChild(next)
-  // next.addEventListener('click', projects2)
+  next.addEventListener('click', knowledge)
+}
+
+function knowledge() {
+  clearDivs('knowledge')
+  let div_text = document.getElementById('text')
+
+  let h = document.createElement('h3')
+  h.innerText = `${DATA['education'][0]['course']} - ${DATA['education'][0]['school']}`
+  div_text.appendChild(h)
+
+  h = document.createElement('h3')
+  h.innerText = `${DATA['education'][1]['course']} - ${DATA['education'][1]['school']} (${DATA['education'][1]['dates']})`
+  div_text.appendChild(h)
+
+  h = document.createElement('h3')
+  h.innerText = 'Technical Skills'
+  div_text.appendChild(h)
+
+  let list = ""
+  for (let i = 0; i < DATA['skills'].length; i++) {
+    list = list + DATA['skills'][i] + " • "
+  }
+  let skills = document.createElement('div')
+  skills.innerText = list
+  div_text.appendChild(skills)
+
+  let next = document.createElement('span')
+  next.innerText = 'experience >>'
+  next.id = 'next'
+  document.getElementById('footer').appendChild(next)
+  // next.addEventListener('click', knowledge)
+
 }
 
 function formatProject(project, div_text) {
