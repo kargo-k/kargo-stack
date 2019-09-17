@@ -129,6 +129,9 @@ div.right h2 {
 li {
   list-style-type: none;
 }
+div#contact {
+  flex-direction: column;
+}
 
 /* 
 rosy brown #B66A6E

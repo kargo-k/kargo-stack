@@ -2,7 +2,7 @@ DATA = {
   "name": "Karen Go",
   "title": "Software Engineer",
   "location": "Seattle, WA",
-  "about": "Karen is a full stack engineer with a natural curiosity and drive for results. With 10 years of product development experience in beverage manufacturing, pharmaceuticals, and technology, Karen recently graduated from an accelerated web development program with Flatiron School.  Experienced in Ruby and JavaScript, she is transitioning into software to build tools that can change the way people live.",
+  "about": "Karen is a full stack engineer with a natural curiosity and drive for results. With 10 years of product development experience in the beverage, pharmaceutical, and technology industries, Karen recently graduated from an accelerated web development program with Flatiron School.  Experienced in Ruby and JavaScript, she is transitioning into software to build tools that can change the way people live.",
   "projects": [
     {
       "title": "Capsule Curate",
@@ -143,7 +143,8 @@ let blurb = document.createElement('p')
 blurb.className = 'fancy'
 blurb.innerText = DATA['about']
 let div = document.createElement('h1')
-div.innerText = '• • •'
+div.innerText = '__'
+// div.innerText = '• • •'
 right.appendChild(blurb)
 right.appendChild(div)
 
@@ -176,3 +177,10 @@ skills = about_section.getElementsByClassName('right')[0]
 
 
 // --------------------contact section
+let contact_section = document.querySelector('div#contact')
+let user = 'karenrgo'
+let dom = 'gmail.com'
+let linktext = user + '@' + dom
+let e = document.createElement('h3')
+e.innerHTML = `<a href='mailto:${user}@${dom}'>${linktext}</a>`
+contact_section.appendChild(e)
