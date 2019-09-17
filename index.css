@@ -38,7 +38,7 @@ div.section {
   background: #fdfbfa;
   flex-direction: column;
 }
-div:nth-child(2n) {
+div.section:nth-child(2n) {
   background-color:#DBCDC6;
   background: -webkit-linear-gradient(to left,  #DBCDC6, #DBCDC655);
   background: linear-gradient(to left,  #DBCDC6, #DBCDC655);
@@ -63,7 +63,6 @@ div#about div.right {
   justify-content: center;
   align-items: center;
   color: #292425;
-  background: transparent;
 }
 div#about img {
   max-height: 50vh;
@@ -116,12 +115,10 @@ div.right {
   justify-content: center;
   align-items: center;
   color: #292425;
-  background: transparent;
 }
 div.education {
   width: 100%;
   margin: 10px 0px;
-  background: transparent;
 }
 div.right h2 {
   margin-top: 10px;
@@ -131,6 +128,9 @@ li {
 }
 div#contact {
   flex-direction: column;
+}
+h4 {
+  font-size: calc(12px + 0.2vw);
 }
 
 /* 

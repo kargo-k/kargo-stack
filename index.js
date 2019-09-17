@@ -6,7 +6,7 @@ DATA = {
   "projects": [
     {
       "title": "Capsule Curate",
-      "summary": "Single page web application for building and visualizing capsule wardrobes.",
+      "summary": "Single page web application for building and visualizing capsule wardrobes, it is a tool for users to select and pair items to wear as well as suggests an OOTD (outfit of the day) to wear, based on the weather forecast.",
       "bullets": [
         "Engineered Ruby on Rails API backend with ActiveRecord Serializers and JWT Authentication",
         "Designed and built frontend using React.js and SCSS for styling",
@@ -117,6 +117,7 @@ let about_section = document.querySelector('div#about')
 left = about_section.getElementsByClassName('left')[0]
 let name = document.createElement('h2')
 name.innerText = DATA['name']
+
 let title = document.createElement('h2')
 title.innerText = DATA['title']
 let loc = document.createElement('h2')
@@ -138,6 +139,13 @@ gh.className = 'icon'
 gh.addEventListener('click', () => window.open('https://github.com/kargo-k', '_blank'))
 link_div.appendChild(gh)
 
+let text = document.createElement('h4')
+text.innerText = 'Contact'
+left.appendChild(text)
+let skip = document.querySelector('div#contact')
+text.addEventListener('click', () => skip.scrollIntoView())
+
+
 right = about_section.getElementsByClassName('right')[0]
 let blurb = document.createElement('p')
 blurb.className = 'fancy'
@@ -149,6 +157,20 @@ right.appendChild(blurb)
 right.appendChild(div)
 
 // --------------------projects section
+// make each project into a div of width vw hide overflow. scrollable like capsule collection. also add button to scroll through?
+let project_section = document.querySelector('div#projects')
+for (let i = 0; i < DATA['projects'].length; i++) {
+  prj_div = document.createElement('div')
+  title = document.createElement('h3')
+  title.innerText = DATA['projects'][i]['title']
+  summary = document.createElement('p')
+  summary.innerText = DATA['projects'][i]['summary']
+  summary.className = 'fancy'
+  prj_div.appendChild(title)
+  prj_div.appendChild(summary)
+  project_section.appendChild(prj_div)
+}
+
 
 
 
