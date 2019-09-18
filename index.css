@@ -170,8 +170,10 @@ div.prj-left {
   height: auto;
 }
 div.inner-flex-div img {
-  width: 90%;
+  max-width: 90%;
+  width: auto;
   height: auto;
+  max-height: 40vh;
 }
 div.prj-right {
   width: 50%;
@@ -180,6 +182,9 @@ div.prj-right {
 }
 li {
   list-style-type: disc;
+  list-style-position: inside;
+  text-indent: -1.5em;
+  padding-left: 1.5em;
 }
 div#button-list {
   text-align: center;
@@ -195,6 +200,10 @@ button {
   color: #B66A6E;
   font-family: 'Fjalla One', sans-serif;
   border-radius: 6px;
+}
+button:hover {
+  background: #B66A6E;
+  color: #292425;
 }
 
 

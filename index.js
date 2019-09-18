@@ -18,7 +18,8 @@ DATA = {
       "github-b": "https://github.com/kargo-k/capsule-curate-server",
       "app-link": "https://capsule-curate-client.herokuapp.com/",
       "demo": "https://youtu.be/wRQVGnccpMM",
-      "img": "./images/curate-wireframe.jpg"
+      "img": "./images/curate-cover.png",
+      "img2": "./images/curate-wireframe.jpg"
     },
     {
       "title": "Algorhythm Nation",
@@ -36,7 +37,7 @@ DATA = {
     },
     {
       "title": "Capsule v1",
-      "summary": "Singe page web application for building and visualizing capsule wardrobes.  As version 1 of 'Capsule Curate', Capsule completed as a paired project using plain JavaScript.",
+      "summary": "Singe page web application for building and visualizing capsule wardrobes.  As version 1 of the 'Capsule Curate' project, Capsule v1 was completed as a paired project using plain JavaScript.",
       "bullets": [
         "Scraped Uniqlo's Women's Apparel website using Nokogiri",
         "Wrote over 1000 lines of vanilla JavaScript with full CRUD functionality",
@@ -60,7 +61,7 @@ DATA = {
     },
     {
       "title": "Feeding Zeus",
-      "summary": "Amazon Alexa Skill to assist user on reaclling when they last fed their pet",
+      "summary": "Amazon Alexa Skill to assist user on recalling when they last fed their pet",
       "bullets": [
         "Self-taught implementation of the Alexa Skills Kit and S3",
         "Authored blog series on the process of learning and creating"
@@ -211,7 +212,7 @@ for (let i = 0; i < DATA['projects'].length; i++) {
 
   if (DATA['projects'][i]['demo']) {
     btn = document.createElement('button')
-    btn.innerText = 'Demo'
+    btn.innerText = 'Video'
     btn.addEventListener('click', () => window.open(`${DATA['projects'][i]['demo']}`, '_blank'))
     buttonDiv.appendChild(btn)
   }
@@ -243,7 +244,11 @@ for (let i = 0; i < DATA['projects'].length; i++) {
     right.appendChild(img)
   }
 
-
+  if (DATA['projects'][i]['img2']) {
+    img = document.createElement('img')
+    img.setAttribute('src', DATA['projects'][i]['img2'])
+    right.appendChild(img)
+  }
 
   wrapper.appendChild(prj_div)
 }
