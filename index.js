@@ -9,35 +9,42 @@ DATA = {
       "summary": "Single page web application for building and visualizing capsule wardrobes, it is a tool for users to select and pair items to wear as well as suggests an OOTD (outfit of the day) to wear, based on the weather forecast.  Built using the React.js framework, Capsule Curate includes controlled forms and renders data dynamically and instantly.",
       "bullets": [
         "Engineered Ruby on Rails API backend with ActiveRecord Serializers and JWT Authentication",
-        "Designed and built frontend using React.js and SCSS for styling",
-        "Constructed 16 components and managed state using React-Redux"
+        "Designed and built frontend using React.js and custom CSS",
+        "Implemented Sass to create more manageable CSS",
+        "Constructed over 16 class and functional components",
+        "Managed state using React-Redux store and dispatch"
       ],
       "github-f": "https://github.com/kargo-k/capsule-curate-client",
       "github-b": "https://github.com/kargo-k/capsule-curate-server",
       "app-link": "https://capsule-curate-client.herokuapp.com/",
-      "demo": "https://youtu.be/wRQVGnccpMM"
+      "demo": "https://youtu.be/wRQVGnccpMM",
+      "img": "./images/curate-wireframe.jpg"
     },
     {
       "title": "Algorhythm Nation",
-      "summary": "Single page web application that allows users to build playlists based on track features such as energy, valence, and daceability.",
+      "summary": "Single page web application that allows users to view their Spotify playlists and built new playlists based on specific track features such as energy, valence, and daceability utilizing the Spotify API.",
       "bullets": [
         "Scoped and managed project timeline with a remote team",
         "Focused on server-side Rails API development with endpoints for songs and playlists",
-        "Utilized Spotify OAuth and API endpoints to populate user's libraries and search tracks"
+        "Utilized Spotify OAuth and API endpoints to populate user's libraries and search tracks",
+        "Styled frontend using custom CSS"
       ],
       "github-f": "https://github.com/kargo-k/algorhythm-client",
       "github-b": "https://github.com/kargo-k/algorhythm-backend2",
-      "app-link": "http://algorhythm-nation-front.herokuapp.com/"
+      "app-link": "http://algorhythm-nation-front.herokuapp.com/",
+      "img": "./images/algorhythm.gif"
     },
     {
       "title": "Capsule v1",
-      "summary": "Singe page web application for building and visualizing capsule wardrobes.  The first version of Capsule Curate completed as a paired project using plain JavaScript.",
+      "summary": "Singe page web application for building and visualizing capsule wardrobes.  As version 1 of 'Capsule Curate', Capsule completed as a paired project using plain JavaScript.",
       "bullets": [
         "Scraped Uniqlo's Women's Apparel website using Nokogiri",
-        "Wrote over 1000 lines of vanilla JavaScript with full CRUD functionality"
+        "Wrote over 1000 lines of vanilla JavaScript with full CRUD functionality",
+        "Manipulated the DOM using plain JavaScript and event listeners"
       ],
       "github-f": "https://github.com/kargo-k/capsule-wardrobe",
-      "app-link": "https://kargo-k.github.io/capsule-wardrobe/index.html"
+      "app-link": "https://kargo-k.github.io/capsule-wardrobe/index.html",
+      "img": "./images/capsulev1.gif"
     },
     {
       "title": "Dive Slate",
@@ -45,17 +52,21 @@ DATA = {
       "bullets": [
         "Built using Ruby on Rails on backend and frontend using the MVC pattern",
         "Authored user stories and sketched wiredframes for data flow",
-        "Scoped and managed project timeline using Trello"
+        "Scoped and managed project timeline using Trello",
+        "Constructed complex model relationships with multiple join tables"
       ],
-      "github-f": "https://github.com/kargo-k/dive-slate-app"
+      "github-f": "https://github.com/kargo-k/dive-slate-app",
+      "img": "./images/diveslate.jpg"
     },
     {
       "title": "Feeding Zeus",
       "summary": "Amazon Alexa Skill to assist user on reaclling when they last fed their pet",
       "bullets": [
-        "Self-taught implementation of the Alexa Skills Kit and S3"
+        "Self-taught implementation of the Alexa Skills Kit and S3",
+        "Authored blog series on the process of learning and creating"
       ],
-      "github-b": "https://github.com/kargo-k/ask-feeding-zeus"
+      "github-f": "https://github.com/kargo-k/ask-feeding-zeus",
+      "img": "https://miro.medium.com/max/689/1*lw3Dc2ZTsCDDwa_E6mjZOw.png"
     },
   ],
   "education": [
@@ -129,18 +140,18 @@ let link_div = document.createElement('div')
 left.appendChild(link_div)
 
 let li = document.createElement('img')
-li.setAttribute('src', 'linkedin_icon.png')
+li.setAttribute('src', './images/linkedin_icon.png')
 li.className = 'icon'
 li.addEventListener('click', () => window.open('https://www.linkedin.com/in/kargo/', '_blank'))
 link_div.appendChild(li)
 let gh = document.createElement('img')
-gh.setAttribute('src', 'github_icon.png')
+gh.setAttribute('src', './images/github_icon.png')
 gh.className = 'icon'
 gh.addEventListener('click', () => window.open('https://github.com/kargo-k', '_blank'))
 link_div.appendChild(gh)
 
 let text = document.createElement('h4')
-text.innerText = 'Contact'
+text.innerText = 'Connect'
 left.appendChild(text)
 let skip = document.querySelector('div#contact')
 text.addEventListener('click', () => skip.scrollIntoView())
@@ -167,11 +178,69 @@ for (let i = 0; i < DATA['projects'].length; i++) {
   prj_div.className = 'project'
   title = document.createElement('h3')
   title.innerText = DATA['projects'][i]['title']
+  prj_div.appendChild(title)
+
+  innerDiv = document.createElement('div')
+  innerDiv.className = 'inner-flex-div'
+  prj_div.appendChild(innerDiv)
+
+  left = document.createElement('div')
+  left.className = 'prj-left'
+  innerDiv.appendChild(left)
   summary = document.createElement('p')
   summary.innerText = DATA['projects'][i]['summary']
-  summary.className = 'fancy'
-  prj_div.appendChild(title)
-  prj_div.appendChild(summary)
+  left.appendChild(summary)
+
+  for (let j = 0; j < DATA['projects'][i]['bullets'].length; j++) {
+    b = document.createElement('li')
+    b.innerText = DATA['projects'][i]['bullets'][j]
+    left.appendChild(b)
+  }
+
+  right = document.createElement('div')
+  right.className = 'prj-right'
+  innerDiv.appendChild(right)
+
+  buttonDiv = document.createElement('div')
+  buttonDiv.id = 'button-div'
+  right.appendChild(buttonDiv)
+
+  if (DATA['projects'][i]['github-f']) {
+    btn = document.createElement('button')
+    btn.innerText = 'Github'
+    btn.addEventListener('click', () => window.open(`${DATA['projects'][i]['github-f']}`, '_blank'))
+    buttonDiv.appendChild(btn)
+  }
+
+  if (DATA['projects'][i]['github-b']) {
+    btn = document.createElement('button')
+    btn.innerText = 'Github II'
+    btn.addEventListener('click', () => window.open(`${DATA['projects'][i]['github-b']}`, '_blank'))
+    buttonDiv.appendChild(btn)
+  }
+
+  if (DATA['projects'][i]['app-link']) {
+    btn = document.createElement('button')
+    btn.innerText = 'Live App'
+    btn.addEventListener('click', () => window.open(`${DATA['projects'][i]['app-link']}`, '_blank'))
+    buttonDiv.appendChild(btn)
+  }
+
+  if (DATA['projects'][i]['demo']) {
+    btn = document.createElement('button')
+    btn.innerText = 'Walkthrough Demo'
+    btn.addEventListener('click', () => window.open(`${DATA['projects'][i]['demo']}`, '_blank'))
+    buttonDiv.appendChild(btn)
+  }
+
+  if (DATA['projects'][i]['img']) {
+    img = document.createElement('img')
+    img.setAttribute('src', DATA['projects'][i]['img'])
+    right.appendChild(img)
+  }
+
+
+
   wrapper.appendChild(prj_div)
 }
 
