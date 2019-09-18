@@ -154,13 +154,6 @@ gh.className = 'icon'
 gh.addEventListener('click', () => window.open('https://github.com/kargo-k', '_blank'))
 link_div.appendChild(gh)
 
-let text = document.createElement('h4')
-text.innerText = 'Connect'
-left.appendChild(text)
-let skip = document.querySelector('div#contact')
-text.addEventListener('click', () => skip.scrollIntoView())
-
-
 right = about_section.getElementsByClassName('right')[0]
 let blurb = document.createElement('p')
 blurb.className = 'fancy'
@@ -171,6 +164,27 @@ div.innerText = '__'
 right.appendChild(blurb)
 right.appendChild(div)
 
+let prj = document.createElement('h3')
+prj.innerText = 'Projects'
+prj.addEventListener('click', () => document.getElementById('projects').scrollIntoView())
+let knowledge = document.createElement('h3')
+knowledge.innerText = 'Knowledge'
+knowledge.addEventListener('click', () => document.getElementById('knowledge').scrollIntoView())
+let exp = document.createElement('h3')
+exp.innerText = 'Experience'
+exp.addEventListener('click', () => document.getElementById('experience').scrollIntoView())
+
+let wrp = document.createElement('div')
+wrp.id = 'nav'
+let text = document.createElement('h3')
+text.style.textDecoration = 'underline'
+text.innerText = 'Skip to: '
+right.appendChild(wrp)
+wrp.appendChild(text)
+wrp.appendChild(prj)
+wrp.appendChild(knowledge)
+wrp.appendChild(exp)
+
 // --------------------projects section
 // make each project into a div of width vw hide overflow. scrollable like capsule collection. also add button to scroll through?
 let project_section = document.querySelector('div#projects')
@@ -180,7 +194,7 @@ project_section.appendChild(wrapper)
 for (let i = 0; i < DATA['projects'].length; i++) {
   prj_div = document.createElement('div')
   prj_div.className = 'project'
-  title = document.createElement('h3')
+  title = document.createElement('h2')
   title.innerText = DATA['projects'][i]['title']
   prj_div.appendChild(title)
 
@@ -312,17 +326,8 @@ for (let i = 0; i < DATA['experience'].length; i++) {
     li.innerText = DATA['experience'][i]['bullets'][j]
     right.appendChild(li)
   }
-
 }
 
-
-
-
-// --------------------contact section
-let contact_section = document.querySelector('div#contact')
-let user = 'karenrgo'
-let dom = 'gmail.com'
-let linktext = user + '@' + dom
-let e = document.createElement('h3')
-e.innerHTML = `<a href='mailto:${user}@${dom}'>${linktext}</a>`
-contact_section.appendChild(e)
+let footer = document.getElementById('footer')
+let skip = document.querySelector('div#about')
+footer.addEventListener('click', () => skip.scrollIntoView())

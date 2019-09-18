@@ -16,20 +16,23 @@ h1, h2, h3, h4 {
   margin: 0;
   padding: 0;
 }
+h2 {
+  margin-top: 10px;
+}
 div#nav {
-  position: fixed;
-  height: 5vh;
   display: flex;
-  width: 100%;
-  padding: 10px;
-  background: #292425;
-  background: -webkit-linear-gradient(to left,  #292425aa, #292425);
-  background: linear-gradient(to left,  #292425aa, #292425);
+  margin: 50px 0;
 }
 div#nav h3 {
-  margin: 0;
-  padding: 0;
+  margin: 0 10px;
+}
+div#nav h3:first-child:hover {
+  color: #292425;
+  cursor: auto;
+}
+div#nav h3:hover {
   color: #B66A6E;
+  cursor: pointer;
 }
 div.section {
   padding: 20px;
@@ -75,7 +78,10 @@ div#about img {
 div#about img.icon {
   width: 30px;
   height: 30px;
-  margin: 5px;
+  margin: 10px 5px;
+}
+div#about img.icon:hover {
+  cursor: pointer;
 }
 .fancy {
   font-family: 'Playfair Display', serif;
@@ -146,7 +152,7 @@ div#wrapper {
 div.project {
   flex: 0 0 auto;
   overflow-wrap: break-word;
-  max-width: 100vw;
+  max-width: 90vw;
   border-right: 3px solid #DBCDC6;
   margin-left: 20px;
   margin-right: 20px;
@@ -205,6 +211,7 @@ button {
 button:hover {
   background: #B66A6E;
   color: #292425;
+  cursor: pointer;
 }
 div.experience-wrapper {
   display: flex;
@@ -223,6 +230,9 @@ div.exp-left {
 div.exp-right {
   width: 100%;
   margin: 0 20px;
+}
+#footer:hover {
+  cursor: pointer;
 }
 
 
