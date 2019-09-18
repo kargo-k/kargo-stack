@@ -252,15 +252,15 @@ for (let i = 0; i < DATA['projects'].length; i++) {
     buttonDiv.appendChild(btn)
   }
 
-  if (DATA['projects'][i]['img']) {
-    img = document.createElement('img')
-    img.setAttribute('src', DATA['projects'][i]['img'])
-    right.appendChild(img)
-  }
-
   if (DATA['projects'][i]['img2']) {
     img = document.createElement('img')
     img.setAttribute('src', DATA['projects'][i]['img2'])
+    right.appendChild(img)
+  }
+
+  if (DATA['projects'][i]['img']) {
+    img = document.createElement('img')
+    img.setAttribute('src', DATA['projects'][i]['img'])
     right.appendChild(img)
   }
 
