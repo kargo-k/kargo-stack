@@ -187,6 +187,11 @@ for (let i = 0; i < DATA['projects'].length; i++) {
   left = document.createElement('div')
   left.className = 'prj-left'
   innerDiv.appendChild(left)
+
+  buttonDiv = document.createElement('div')
+  buttonDiv.id = 'button-div'
+  left.appendChild(buttonDiv)
+
   summary = document.createElement('p')
   summary.innerText = DATA['projects'][i]['summary']
   left.appendChild(summary)
@@ -201,9 +206,15 @@ for (let i = 0; i < DATA['projects'].length; i++) {
   right.className = 'prj-right'
   innerDiv.appendChild(right)
 
-  buttonDiv = document.createElement('div')
-  buttonDiv.id = 'button-div'
-  right.appendChild(buttonDiv)
+
+
+
+  if (DATA['projects'][i]['demo']) {
+    btn = document.createElement('button')
+    btn.innerText = 'Demo'
+    btn.addEventListener('click', () => window.open(`${DATA['projects'][i]['demo']}`, '_blank'))
+    buttonDiv.appendChild(btn)
+  }
 
   if (DATA['projects'][i]['github-f']) {
     btn = document.createElement('button')
@@ -221,15 +232,8 @@ for (let i = 0; i < DATA['projects'].length; i++) {
 
   if (DATA['projects'][i]['app-link']) {
     btn = document.createElement('button')
-    btn.innerText = 'Live App'
+    btn.innerText = 'App'
     btn.addEventListener('click', () => window.open(`${DATA['projects'][i]['app-link']}`, '_blank'))
-    buttonDiv.appendChild(btn)
-  }
-
-  if (DATA['projects'][i]['demo']) {
-    btn = document.createElement('button')
-    btn.innerText = 'Walkthrough Demo'
-    btn.addEventListener('click', () => window.open(`${DATA['projects'][i]['demo']}`, '_blank'))
     buttonDiv.appendChild(btn)
   }
 
