@@ -87,6 +87,7 @@ DATA = {
     {
       "title": "Product Engineer",
       "company": "Talking Rain Beverage Company",
+      "logo": "./images/tr.png",
       "location": "Seattle, WA",
       "dates": "2017-2019",
       "summary": "Focused on ideation and technical development for new product lines.",
@@ -98,7 +99,8 @@ DATA = {
     },
     {
       "title": "Product Manager",
-      "company": "Scientific Innovations Company Pte Ltd",
+      "company": "Scientific Innovations Company",
+      "logo": "./images/scientificinnovations.png",
       "location": "Singapore",
       "dates": "2015-2016",
       "summary": "Managed cross-functional product development teams and developed the go-to-market plans across four product lines",
@@ -111,6 +113,7 @@ DATA = {
     {
       "title": "Senior Research Associate",
       "company": "Pulmatrix Inc",
+      "logo": "./images/pulmatrix.jpg",
       "location": "Boston, MA",
       "dates": "2011-2014",
       "summary": "Product development using systematic experimental design and quantitative data analysis",
@@ -207,9 +210,6 @@ for (let i = 0; i < DATA['projects'].length; i++) {
   right.className = 'prj-right'
   innerDiv.appendChild(right)
 
-
-
-
   if (DATA['projects'][i]['demo']) {
     btn = document.createElement('button')
     btn.innerText = 'Video'
@@ -276,6 +276,44 @@ skills = about_section.getElementsByClassName('right')[0]
 
 
 // --------------------experience section
+let experience_section = document.querySelector('div#experience')
+for (let i = 0; i < DATA['experience'].length; i++) {
+  wrapper = document.createElement('div')
+  wrapper.className = 'experience-wrapper'
+  left = document.createElement('div')
+  left.className = 'exp-left'
+  right = document.createElement('div')
+  right.className = 'exp-right'
+  wrapper.appendChild(left)
+  wrapper.appendChild(right)
+  experience_section.appendChild(wrapper)
+
+  img = document.createElement('img')
+  img.setAttribute('src', DATA['experience'][i]['logo'])
+  img.className = 'logo'
+  left.appendChild(img)
+
+  co = document.createElement('h4')
+  co.innerText = DATA['experience'][i]['company']
+  loc = document.createElement('h4')
+  loc.innerText = DATA['experience'][i]['location']
+  left.appendChild(co)
+  left.appendChild(loc)
+
+  title = document.createElement('h3')
+  title.innerText = DATA['experience'][i]['title']
+  dates = document.createElement('h4')
+  dates.innerText = DATA['experience'][i]['dates']
+  right.appendChild(title)
+  right.appendChild(dates)
+
+  for (let j = 0; j < DATA['experience'][i]['bullets'].length; j++) {
+    li = document.createElement('li')
+    li.innerText = DATA['experience'][i]['bullets'][j]
+    right.appendChild(li)
+  }
+
+}
 
 
 

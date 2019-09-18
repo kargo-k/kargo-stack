@@ -33,7 +33,8 @@ div#nav h3 {
 }
 div.section {
   padding: 20px;
-  height: 95vh;
+  min-height: 95vh;
+  height: auto;
   display: flex;
   align-items: center;
   background: #fdfbfa;
@@ -204,6 +205,24 @@ button {
 button:hover {
   background: #B66A6E;
   color: #292425;
+}
+div.experience-wrapper {
+  display: flex;
+  justify-content: space-around;
+  /* align-items: flex-start; */
+  align-content: flex-start;
+  width: 100%;
+  margin: 15px 0px;
+}
+div.experience-wrapper img {
+  max-width: 170px;
+}
+div.exp-left {
+  width: 300px;
+}
+div.exp-right {
+  width: 100%;
+  margin: 0 20px;
 }
 
 
