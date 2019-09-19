@@ -125,10 +125,25 @@ DATA = {
   ]
 }
 
+// nav link event listeners
+let about_section = document.querySelector('div#about')
+document.getElementById('nav-abt').addEventListener('click', () => about_section.scrollIntoView())
+
+let project_section = document.querySelector('div#projects')
+document.getElementById('nav-prj').addEventListener('click', () => project_section.scrollIntoView())
+
+let skills_section = document.querySelector('div#skills')
+document.getElementById('nav-skl').addEventListener('click', () => skills_section.scrollIntoView())
+
+let education_section = document.querySelector('div#education')
+document.getElementById('nav-edu').addEventListener('click', () => education_section.scrollIntoView())
+
+
+let experience_section = document.querySelector('div#experience')
+document.getElementById('nav-exp').addEventListener('click', () => experience_section.scrollIntoView())
 
 //------------- about section
 
-let about_section = document.querySelector('div#about')
 left = about_section.getElementsByClassName('left')[0]
 let name = document.createElement('h2')
 name.innerText = DATA['name']
@@ -156,7 +171,7 @@ link_div.appendChild(gh)
 
 right = about_section.getElementsByClassName('right')[0]
 let blurb = document.createElement('p')
-blurb.className = 'fancy'
+blurb.id = 'blurb'
 blurb.innerText = DATA['about']
 let div = document.createElement('h1')
 div.innerText = '__'
@@ -164,140 +179,98 @@ div.innerText = '__'
 right.appendChild(blurb)
 right.appendChild(div)
 
-let prj = document.createElement('h3')
-prj.innerText = 'Projects'
-prj.addEventListener('click', () => document.getElementById('projects').scrollIntoView())
-let knowledge = document.createElement('h3')
-knowledge.innerText = 'Knowledge'
-knowledge.addEventListener('click', () => document.getElementById('knowledge').scrollIntoView())
-let exp = document.createElement('h3')
-exp.innerText = 'Experience'
-exp.addEventListener('click', () => document.getElementById('experience').scrollIntoView())
-
-let wrp = document.createElement('div')
-wrp.id = 'nav'
-let text = document.createElement('h3')
-text.style.textDecoration = 'underline'
-text.innerText = 'Skip to: '
-right.appendChild(wrp)
-wrp.appendChild(text)
-wrp.appendChild(prj)
-wrp.appendChild(knowledge)
-wrp.appendChild(exp)
 
 // --------------------projects section
 // make each project into a div of width vw hide overflow. scrollable like capsule collection. also add button to scroll through?
-let project_section = document.querySelector('div#projects')
-let wrapper = document.createElement('div')
-wrapper.id = 'wrapper'
-project_section.appendChild(wrapper)
-for (let i = 0; i < DATA['projects'].length; i++) {
-  prj_div = document.createElement('div')
-  prj_div.className = 'project'
-  title = document.createElement('h2')
-  title.innerText = DATA['projects'][i]['title']
-  prj_div.appendChild(title)
+// let wrapper = document.createElement('div')
+// wrapper.id = 'wrapper'
+// project_section.appendChild(wrapper)
+// for (let i = 0; i < DATA['projects'].length; i++) {
+//   prj_div = document.createElement('div')
+//   prj_div.className = 'project'
+//   title = document.createElement('h2')
+//   title.innerText = DATA['projects'][i]['title']
+//   prj_div.appendChild(title)
 
-  innerDiv = document.createElement('div')
-  innerDiv.className = 'inner-flex-div'
-  prj_div.appendChild(innerDiv)
+//   innerDiv = document.createElement('div')
+//   innerDiv.className = 'inner-flex-div'
+//   prj_div.appendChild(innerDiv)
 
-  left = document.createElement('div')
-  left.className = 'prj-left'
-  innerDiv.appendChild(left)
+//   left = document.createElement('div')
+//   left.className = 'prj-left'
+//   innerDiv.appendChild(left)
 
-  buttonDiv = document.createElement('div')
-  buttonDiv.id = 'button-div'
-  left.appendChild(buttonDiv)
+//   buttonDiv = document.createElement('div')
+//   buttonDiv.id = 'button-div'
+//   left.appendChild(buttonDiv)
 
-  summary = document.createElement('p')
-  summary.innerText = DATA['projects'][i]['summary']
-  left.appendChild(summary)
+//   summary = document.createElement('p')
+//   summary.innerText = DATA['projects'][i]['summary']
+//   left.appendChild(summary)
 
-  for (let j = 0; j < DATA['projects'][i]['bullets'].length; j++) {
-    b = document.createElement('li')
-    b.innerText = DATA['projects'][i]['bullets'][j]
-    left.appendChild(b)
-  }
+//   for (let j = 0; j < DATA['projects'][i]['bullets'].length; j++) {
+//     b = document.createElement('li')
+//     b.innerText = DATA['projects'][i]['bullets'][j]
+//     left.appendChild(b)
+//   }
 
-  right = document.createElement('div')
-  right.className = 'prj-right'
-  innerDiv.appendChild(right)
+//   right = document.createElement('div')
+//   right.className = 'prj-right'
+//   innerDiv.appendChild(right)
 
-  if (DATA['projects'][i]['demo']) {
-    btn = document.createElement('button')
-    btn.innerText = 'Video'
-    btn.addEventListener('click', () => window.open(`${DATA['projects'][i]['demo']}`, '_blank'))
-    buttonDiv.appendChild(btn)
-  }
+//   if (DATA['projects'][i]['demo']) {
+//     btn = document.createElement('button')
+//     btn.innerText = 'Video'
+//     btn.addEventListener('click', () => window.open(`${DATA['projects'][i]['demo']}`, '_blank'))
+//     buttonDiv.appendChild(btn)
+//   }
 
-  if (DATA['projects'][i]['github-f']) {
-    btn = document.createElement('button')
-    btn.innerText = 'Github'
-    btn.addEventListener('click', () => window.open(`${DATA['projects'][i]['github-f']}`, '_blank'))
-    buttonDiv.appendChild(btn)
-  }
+//   if (DATA['projects'][i]['github-f']) {
+//     btn = document.createElement('button')
+//     btn.innerText = 'Github'
+//     btn.addEventListener('click', () => window.open(`${DATA['projects'][i]['github-f']}`, '_blank'))
+//     buttonDiv.appendChild(btn)
+//   }
 
-  if (DATA['projects'][i]['github-b']) {
-    btn = document.createElement('button')
-    btn.innerText = 'Github II'
-    btn.addEventListener('click', () => window.open(`${DATA['projects'][i]['github-b']}`, '_blank'))
-    buttonDiv.appendChild(btn)
-  }
+//   if (DATA['projects'][i]['github-b']) {
+//     btn = document.createElement('button')
+//     btn.innerText = 'Github II'
+//     btn.addEventListener('click', () => window.open(`${DATA['projects'][i]['github-b']}`, '_blank'))
+//     buttonDiv.appendChild(btn)
+//   }
 
-  if (DATA['projects'][i]['app-link']) {
-    btn = document.createElement('button')
-    btn.innerText = 'App'
-    btn.addEventListener('click', () => window.open(`${DATA['projects'][i]['app-link']}`, '_blank'))
-    buttonDiv.appendChild(btn)
-  }
+//   if (DATA['projects'][i]['app-link']) {
+//     btn = document.createElement('button')
+//     btn.innerText = 'App'
+//     btn.addEventListener('click', () => window.open(`${DATA['projects'][i]['app-link']}`, '_blank'))
+//     buttonDiv.appendChild(btn)
+//   }
 
-  if (DATA['projects'][i]['img2']) {
-    img = document.createElement('img')
-    img.setAttribute('src', DATA['projects'][i]['img2'])
-    right.appendChild(img)
-  }
+//   if (DATA['projects'][i]['img2']) {
+//     img = document.createElement('img')
+//     img.setAttribute('src', DATA['projects'][i]['img2'])
+//     right.appendChild(img)
+//   }
 
-  if (DATA['projects'][i]['img']) {
-    img = document.createElement('img')
-    img.setAttribute('src', DATA['projects'][i]['img'])
-    right.appendChild(img)
-  }
+//   if (DATA['projects'][i]['img']) {
+//     img = document.createElement('img')
+//     img.setAttribute('src', DATA['projects'][i]['img'])
+//     right.appendChild(img)
+//   }
 
-  wrapper.appendChild(prj_div)
-}
-
-
-
-
-// --------------------knowledge section
-let knowledge_section = document.querySelector('div#knowledge')
-education = knowledge_section.getElementsByClassName('left')[0]
-let newdiv, h2, h3
-for (let i = 0; i < DATA['education'].length; i++) {
-  newdiv = document.createElement('div')
-  newdiv.className = 'education'
-  h2 = document.createElement('h2')
-  h2.innerText = DATA['education'][i]['course']
-  h3 = document.createElement('h3')
-  h3.innerText = DATA['education'][i]['school'] + " • " + DATA['education'][i]['dates']
-  newdiv.appendChild(h2)
-  newdiv.appendChild(h3)
-  education.appendChild(newdiv)
-}
-
-skills = about_section.getElementsByClassName('right')[0]
+//   wrapper.appendChild(prj_div)
+// }
 
 
 // --------------------experience section
-let experience_section = document.querySelector('div#experience')
+
 for (let i = 0; i < DATA['experience'].length; i++) {
   wrapper = document.createElement('div')
-  wrapper.className = 'experience-wrapper'
+  wrapper.className = 'row'
   left = document.createElement('div')
-  left.className = 'exp-left'
+  left.className = 'left'
   right = document.createElement('div')
-  right.className = 'exp-right'
+  right.className = 'right'
   wrapper.appendChild(left)
   wrapper.appendChild(right)
   experience_section.appendChild(wrapper)
@@ -327,7 +300,3 @@ for (let i = 0; i < DATA['experience'].length; i++) {
     right.appendChild(li)
   }
 }
-
-let footer = document.getElementById('footer')
-let skip = document.querySelector('div#about')
-footer.addEventListener('click', () => skip.scrollIntoView())
