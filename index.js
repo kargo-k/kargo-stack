@@ -2,7 +2,7 @@ DATA = {
   "name": "Karen Go",
   "title": "Software Engineer",
   "location": "Seattle, WA",
-  "about": "Karen is a full stack engineer with a natural curiosity and drive for results. With 10 years of product development experience in the beverage, pharmaceutical, and technology industries, Karen recently graduated from an accelerated web development program with Flatiron School.  Experienced in Ruby and JavaScript, she is transitioning into software to build tools that can change the way people live.",
+  "about": "Karen is a full stack software engineer with a natural curiosity and drive for results. With 10 years of product development experience in the beverage, pharmaceutical, and technology industries, Karen recently graduated from an accelerated web development program with Flatiron School.  Experienced in Ruby and JavaScript, she is transitioning into software to build tools that can change the way people live.",
   "projects": [
     {
       "title": "Capsule Curate",
@@ -181,85 +181,73 @@ right.appendChild(div)
 
 
 // --------------------projects section
-// make each project into a div of width vw hide overflow. scrollable like capsule collection. also add button to scroll through?
-// let wrapper = document.createElement('div')
-// wrapper.id = 'wrapper'
-// project_section.appendChild(wrapper)
-// for (let i = 0; i < DATA['projects'].length; i++) {
-//   prj_div = document.createElement('div')
-//   prj_div.className = 'project'
-//   title = document.createElement('h2')
-//   title.innerText = DATA['projects'][i]['title']
-//   prj_div.appendChild(title)
 
-//   innerDiv = document.createElement('div')
-//   innerDiv.className = 'inner-flex-div'
-//   prj_div.appendChild(innerDiv)
+for (let i = 0; i < DATA['projects'].length; i++) {
+  wrapper = document.createElement('div')
+  wrapper.className = 'row'
+  left = document.createElement('div')
+  left.className = 'left'
+  right = document.createElement('div')
+  right.className = 'right'
+  wrapper.appendChild(left)
+  wrapper.appendChild(right)
+  project_section.appendChild(wrapper)
 
-//   left = document.createElement('div')
-//   left.className = 'prj-left'
-//   innerDiv.appendChild(left)
+  img = document.createElement('img')
+  img.setAttribute('src', DATA['projects'][i]['img'])
+  img.addEventListener('click', () => window.open(`${DATA['projects'][i]['img']}`, '_blank'))
+  left.appendChild(img)
 
-//   buttonDiv = document.createElement('div')
-//   buttonDiv.id = 'button-div'
-//   left.appendChild(buttonDiv)
+  buttonDiv = document.createElement('div')
+  buttonDiv.className = 'col'
+  buttonDiv.id = 'buttons'
+  left.appendChild(buttonDiv)
 
-//   summary = document.createElement('p')
-//   summary.innerText = DATA['projects'][i]['summary']
-//   left.appendChild(summary)
+  if (DATA['projects'][i]['demo']) {
+    btn = document.createElement('button')
+    btn.innerText = 'Video Walkthrough'
+    btn.addEventListener('click', () => window.open(`${DATA['projects'][i]['demo']}`, '_blank'))
+    buttonDiv.appendChild(btn)
+  }
 
-//   for (let j = 0; j < DATA['projects'][i]['bullets'].length; j++) {
-//     b = document.createElement('li')
-//     b.innerText = DATA['projects'][i]['bullets'][j]
-//     left.appendChild(b)
-//   }
+  if (DATA['projects'][i]['github-f']) {
+    btn = document.createElement('button')
+    btn.innerText = 'Github'
+    btn.addEventListener('click', () => window.open(`${DATA['projects'][i]['github-f']}`, '_blank'))
+    buttonDiv.appendChild(btn)
+  }
 
-//   right = document.createElement('div')
-//   right.className = 'prj-right'
-//   innerDiv.appendChild(right)
+  if (DATA['projects'][i]['github-b']) {
+    btn = document.createElement('button')
+    btn.innerText = 'Github (backend)'
+    btn.addEventListener('click', () => window.open(`${DATA['projects'][i]['github-b']}`, '_blank'))
+    buttonDiv.appendChild(btn)
+  }
 
-//   if (DATA['projects'][i]['demo']) {
-//     btn = document.createElement('button')
-//     btn.innerText = 'Video'
-//     btn.addEventListener('click', () => window.open(`${DATA['projects'][i]['demo']}`, '_blank'))
-//     buttonDiv.appendChild(btn)
-//   }
+  if (DATA['projects'][i]['app-link']) {
+    btn = document.createElement('button')
+    btn.innerText = 'Launch App'
+    btn.addEventListener('click', () => window.open(`${DATA['projects'][i]['app-link']}`, '_blank'))
+    buttonDiv.appendChild(btn)
+  }
 
-//   if (DATA['projects'][i]['github-f']) {
-//     btn = document.createElement('button')
-//     btn.innerText = 'Github'
-//     btn.addEventListener('click', () => window.open(`${DATA['projects'][i]['github-f']}`, '_blank'))
-//     buttonDiv.appendChild(btn)
-//   }
+  title = document.createElement('h2')
+  title.innerText = DATA['projects'][i]['title']
+  right.appendChild(title)
 
-//   if (DATA['projects'][i]['github-b']) {
-//     btn = document.createElement('button')
-//     btn.innerText = 'Github II'
-//     btn.addEventListener('click', () => window.open(`${DATA['projects'][i]['github-b']}`, '_blank'))
-//     buttonDiv.appendChild(btn)
-//   }
+  summary = document.createElement('p')
+  summary.innerText = DATA['projects'][i]['summary']
+  right.appendChild(summary)
 
-//   if (DATA['projects'][i]['app-link']) {
-//     btn = document.createElement('button')
-//     btn.innerText = 'App'
-//     btn.addEventListener('click', () => window.open(`${DATA['projects'][i]['app-link']}`, '_blank'))
-//     buttonDiv.appendChild(btn)
-//   }
+  for (let j = 0; j < DATA['projects'][i]['bullets'].length; j++) {
+    b = document.createElement('li')
+    b.innerText = DATA['projects'][i]['bullets'][j]
+    right.appendChild(b)
+  }
 
-//   if (DATA['projects'][i]['img2']) {
-//     img = document.createElement('img')
-//     img.setAttribute('src', DATA['projects'][i]['img2'])
-//     right.appendChild(img)
-//   }
+}
 
-//   if (DATA['projects'][i]['img']) {
-//     img = document.createElement('img')
-//     img.setAttribute('src', DATA['projects'][i]['img'])
-//     right.appendChild(img)
-//   }
 
-//   wrapper.appendChild(prj_div)
-// }
 
 
 // --------------------experience section
@@ -287,16 +275,23 @@ for (let i = 0; i < DATA['experience'].length; i++) {
   left.appendChild(co)
   left.appendChild(loc)
 
-  title = document.createElement('h3')
+  title = document.createElement('h2')
   title.innerText = DATA['experience'][i]['title']
   dates = document.createElement('h4')
   dates.innerText = DATA['experience'][i]['dates']
   right.appendChild(title)
   right.appendChild(dates)
 
+  sum = document.createElement('p')
+  sum.innerText = DATA['experience'][i]['summary']
+  right.appendChild(sum)
+
+  ul = document.createElement('ul')
+  right.appendChild(ul)
+
   for (let j = 0; j < DATA['experience'][i]['bullets'].length; j++) {
     li = document.createElement('li')
     li.innerText = DATA['experience'][i]['bullets'][j]
-    right.appendChild(li)
+    ul.appendChild(li)
   }
 }
