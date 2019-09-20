@@ -75,7 +75,7 @@ div.half.col {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 75vh;
+  min-height: 90vh;
 }
 .stripe {
   background-color: var(--color-light);
