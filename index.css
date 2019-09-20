@@ -177,6 +177,11 @@ div.half.col {
     display: flex;
     flex-direction: column;
   }
+  #about img {
+    max-width: 50vw;
+    height: auto;
+    margin: 20px;
+  }
   #projects .row, #education .row, #skills .row {
     display: flex;
     flex-direction: column;
