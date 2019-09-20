@@ -19,7 +19,7 @@ html {
 body {
   color: var(--color-dark);
   font-family: var(--font-serif);
-  line-height: 3.3vh;
+  line-height: 110%;
   font-size: calc(16px + 0.2vw);
   margin: 0;
   background: var(--color-bg);
