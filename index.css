@@ -19,7 +19,7 @@ html {
 body {
   color: var(--color-dark);
   font-family: var(--font-serif);
-  line-height: 110%;
+  line-height: calc(25px + 1vh);
   font-size: calc(16px + 0.2vw);
   margin: 0;
   background: var(--color-bg);
@@ -111,11 +111,8 @@ div.half.col {
 #about #blurb {
   line-height: calc(25px + 1vh);
   max-width: 800px;
+  margin: 0 20px;
 }
-#about div.col {
-  max-width: 50vw;
-}
-
 #projects img {
   width: 400px;
   border: 3px var(--color-med) solid;
@@ -169,18 +166,27 @@ div.half.col {
   margin-top: 10px;
 }
 
-@media only screen and (max-width: 812px) {
+@media screen and (max-width: 812px) {
   #navbar .link {
     margin-left: 3px;
+    font-size: 12px;
   }
   #about {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    align-items: center
+  }
+  #about #blurb {
+    text-align: left;
   }
   #about img {
     max-width: 50vw;
     height: auto;
     margin: 20px;
+  }
+  .section {
+    width: 100%;
   }
   #projects .row, #education .row, #skills .row {
     display: flex;
@@ -191,5 +197,41 @@ div.half.col {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+  #projects img {
+    max-width: 80vw;
+  }
+  #projects .row{
+    border-bottom: 2px solid var(--color-light);
+  }
+  #projects .row:last-child{
+    border: 0;
+  }
+  #projects button {
+    color: var(--color-med);
+    text-decoration: underline;
+    margin: 0;
+  }
+  #education {
+    text-align: center;
+  }
+  #education img {
+    height: 80px;
+    margin: 10px;
+  }
+  #skills h2 {
+    margin: 0;
+  }
+  #experience h2 {
+    margin: 0;
+  }
+  #experience .left {
+    margin-bottom: 0;
+  }
+  #experience .row{
+    border-bottom: 2px solid var(--color-light);
+  }
+  #experience .row:last-child{
+    border: 0;
   }
 }
