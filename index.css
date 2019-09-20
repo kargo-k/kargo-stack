@@ -169,7 +169,7 @@ div.half.col {
   margin-top: 10px;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 812px) {
   #navbar .link {
     margin-left: 3px;
   }
