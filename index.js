@@ -18,7 +18,8 @@ DATA = {
       "github-b": "https://github.com/kargo-k/capsule-curate-server",
       "app-link": "https://capsule-curate-client.herokuapp.com/",
       "demo": "https://youtu.be/wRQVGnccpMM",
-      "img": "./images/curate-cover.png",
+      "img": "./images/curate.gif",
+      "img3": "./images/curate-cover.png",
       "img2": "./images/curate-wireframe.jpg"
     },
     {
@@ -54,10 +55,11 @@ DATA = {
         "Built using Ruby on Rails on backend and frontend using the MVC pattern",
         "Authored user stories and sketched wiredframes for data flow",
         "Scoped and managed project timeline using Trello",
-        "Constructed complex model relationships with multiple join tables"
+        "Constructed complex many-to-many relationships with 6 models and 3 join tables"
       ],
       "github-f": "https://github.com/kargo-k/dive-slate-app",
-      "img": "./images/diveslate.jpg"
+      "img": "./images/diveslategif.gif",
+      "img2": "./images/diveslate.jpg"
     },
     {
       "title": "Feeding Zeus",
@@ -246,8 +248,6 @@ for (let i = 0; i < DATA['projects'].length; i++) {
   }
 
 }
-
-
 
 
 // --------------------experience section

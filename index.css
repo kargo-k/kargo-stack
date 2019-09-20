@@ -107,6 +107,7 @@ div.half.col {
 }
 #about #blurb {
   line-height: calc(25px + 1vh);
+  max-width: 600px;
 }
 #about div.col {
   max-width: 50vw;
