@@ -39,6 +39,7 @@ div#navbar {
   background: var(--color-med);
   font-family: var(--font-heading);
   color: var(--color-bg);
+  font-size: calc(15px + 0.2vw);
 }
 .container {
   margin: 20px;
@@ -75,7 +76,6 @@ div.half.col {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 90vh;
 }
 .stripe {
   background-color: var(--color-light);
@@ -86,9 +86,12 @@ div.half.col {
 }
 #kargostack {
   margin-left: 20px;
+  color: var(--color-dark);
+  line-height: 100%;
 }
 #about {
   padding-top: 70px;
+  min-height: 90vh;
 }
 #about img {
   max-width: 25vw;
@@ -107,14 +110,14 @@ div.half.col {
 }
 #about #blurb {
   line-height: calc(25px + 1vh);
-  max-width: 600px;
+  max-width: 800px;
 }
 #about div.col {
   max-width: 50vw;
 }
 
 #projects img {
-  width: 200px;
+  width: 400px;
   border: 3px var(--color-med) solid;
 }
 #projects img:hover {
@@ -153,22 +156,44 @@ div.half.col {
   margin: 20px;
 }
 #experience h2 {
-  margin-top: 0px;
+  margin: 0px;
+}
+#experience h4 {
+  margin: 5px 0;
 }
 #experience .right {
   margin: 20px;
-  max-width: 600px;
+  max-width: 800px;
 }
 #experience .right li {
   margin-top: 10px;
 }
 
-@media only screen (min-width: 1200px) {
+/* @media only screen and (min-width: 1200px) {
   body {
     padding: 25vw;
   }
-}
+} */
 
-@media only screen (max-width: 700px) {
-
+@media only screen and (max-width: 640px) {
+  #navbar .link {
+    margin-left: 3px;
+  }
+  #about {
+    display: flex;
+    flex-direction: column;
+  }
+  #projects .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #knowledge .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #experience .row {
+    align-items: flex-start;
+  }
 }
