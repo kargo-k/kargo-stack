@@ -145,7 +145,7 @@ let experience_section = document.querySelector('div#experience')
 document.getElementById('nav-exp').addEventListener('click', () => experience_section.scrollIntoView())
 
 let contact_section = document.querySelector('div#contact')
-document.getElementById('nav-con').addEventListener('click', () => experience_section.scrollIntoView())
+document.getElementById('nav-con').addEventListener('click', () => contact_section.scrollIntoView())
 
 //------------- about section
 
