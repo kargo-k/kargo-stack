@@ -144,6 +144,9 @@ document.getElementById('nav-edu').addEventListener('click', () => education_sec
 let experience_section = document.querySelector('div#experience')
 document.getElementById('nav-exp').addEventListener('click', () => experience_section.scrollIntoView())
 
+let contact_section = document.querySelector('div#contact')
+document.getElementById('nav-con').addEventListener('click', () => experience_section.scrollIntoView())
+
 //------------- about section
 
 left = about_section.getElementsByClassName('left')[0]
