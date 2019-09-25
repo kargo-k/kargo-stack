@@ -179,15 +179,12 @@ right = about_section.getElementsByClassName('right')[0]
 let blurb = document.createElement('p')
 blurb.className = 'blurb'
 blurb.innerText = DATA['about']
-let div = document.createElement('h1')
-div.innerText = '__'
 let blurb2 = document.createElement('p')
 
 blurb2.className = 'blurb'
 blurb2.innerText = DATA['personal']
 right.appendChild(blurb)
 right.appendChild(blurb2)
-right.appendChild(div)
 
 
 // --------------------projects section

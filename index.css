@@ -165,10 +165,48 @@ div.half.col {
 #experience .right li {
   margin-top: 10px;
 }
-
-@media screen and (max-width: 812px) {
+@media screen and (max-width: 414px) {
+  div#navbar div.link {
+    font-size: 10px;
+    padding: 0 8px 0 0;
+  }
+  div#kargostack {
+    margin-left: 8px;
+    font-size: 10px;
+  }
+  div#navbar {
+    height: 30px;
+  }
+  h1.stripe {
+    font-size: 36px;
+    line-height: 18px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  #experience img.logo {
+    width: 40vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  h1.stripe {
+    padding: 0;
+  }
+  #kargostack {
+    margin-left: 10px;
+  }
+  .section {
+    padding: 0px;
+  }
+  div.col.half {
+    margin: 10px 0 0 0;
+  }
+  #navbar div.container.row {
+    margin: 5px;
+  }
   #navbar .link {
-    margin-left: 3px;
+    margin-left: 0px;
+    padding: 5px 7px;
     font-size: 12px;
   }
   #about {
@@ -178,11 +216,11 @@ div.half.col {
     align-items: center
   }
   #about p.blurb {
-    text-align: center;
+    text-align: left;
     margin: 10px 20px;
   }
   #about img {
-    max-width: 50vw;
+    max-width: 40vw;
     height: auto;
     margin: 20px;
   }
