@@ -3,6 +3,7 @@ DATA = {
   "title": "Software Engineer",
   "location": "Seattle, WA",
   "about": "Karen is a full stack software engineer with a natural curiosity and drive for results. With 10 years of product development experience in the beverage, pharmaceutical, and technology industries, Karen recently graduated from an accelerated web development program with Flatiron School.  Experienced in Ruby and JavaScript, she is transitioning into software to build tools that can change the way people live.",
+  "personal": "As a photography enthusiast, Karen enjoys traveling, especially to Southeast Asia where the landscape is drastic and the flavor profiles fragrantly complex.  You can find her hiking or playing fetch with her dog during the Seattle summers.  And, this winter, you just might be able to catch her learning to snowboard on the bunny slopes.",
   "projects": [
     {
       "title": "Capsule Curate",
@@ -176,12 +177,16 @@ link_div.appendChild(gh)
 
 right = about_section.getElementsByClassName('right')[0]
 let blurb = document.createElement('p')
-blurb.id = 'blurb'
+blurb.className = 'blurb'
 blurb.innerText = DATA['about']
 let div = document.createElement('h1')
 div.innerText = '__'
-// div.innerText = '• • •'
+let blurb2 = document.createElement('p')
+
+blurb2.className = 'blurb'
+blurb2.innerText = DATA['personal']
 right.appendChild(blurb)
+right.appendChild(blurb2)
 right.appendChild(div)
 
 
