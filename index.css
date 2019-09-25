@@ -108,10 +108,10 @@ div.half.col {
 #about .icon:hover {
   cursor: pointer;
 }
-#about #blurb {
+#about p.blurb {
   line-height: calc(25px + 1vh);
   max-width: 800px;
-  margin: 0 20px;
+  margin: 5px 10px;
 }
 #projects img {
   width: 400px;
@@ -177,8 +177,9 @@ div.half.col {
     text-align: center;
     align-items: center
   }
-  #about #blurb {
-    text-align: left;
+  #about p.blurb {
+    text-align: center;
+    margin: 10px 20px;
   }
   #about img {
     max-width: 50vw;
