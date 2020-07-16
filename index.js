@@ -146,8 +146,8 @@ DATA = {
 let about_section = document.querySelector('div#about')
 document.getElementById('nav-abt').addEventListener('click', () => about_section.scrollIntoView())
 
-let project_section = document.querySelector('div#projects')
-document.getElementById('nav-prj').addEventListener('click', () => project_section.scrollIntoView())
+//let project_section = document.querySelector('div#projects')
+//document.getElementById('nav-prj').addEventListener('click', () => project_section.scrollIntoView())
 
 let skills_section = document.querySelector('div#skills')
 document.getElementById('nav-skl').addEventListener('click', () => skills_section.scrollIntoView())
@@ -201,7 +201,7 @@ right.appendChild(blurb)
 right.appendChild(blurb2)
 
 
-// --------------------projects section
+/* --------------------projects section
 
 for (let i = 0; i < DATA['projects'].length; i++) {
   wrapper = document.createElement('div')
@@ -267,6 +267,7 @@ for (let i = 0; i < DATA['projects'].length; i++) {
   }
 
 }
+*/
 
 
 // --------------------experience section
