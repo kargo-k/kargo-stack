@@ -2,8 +2,8 @@ DATA = {
   "name": "Karen Go",
   "title": "Software Engineer",
   "location": "Seattle, WA",
-  "about": "Karen is a full stack software engineer with a natural curiosity and drive for results. With 10 years of product development experience in the beverage, pharmaceutical, and technology industries, Karen recently graduated from an accelerated web development program with Flatiron School.  Experienced in Ruby and JavaScript, she is transitioning into software to build tools that can change the way people live.",
-  "personal": "As a photography enthusiast, Karen enjoys traveling, especially to Southeast Asia where the landscape is drastic and the flavor profiles fragrantly complex.  You can find her hiking or playing fetch with her dog during the Seattle summers.  And, this winter, you just might be able to catch her learning to snowboard on the bunny slopes.",
+  "about": "Karen is a full stack software engineer with a natural curiosity and drive for results. With 10 years of product development experience in the a mix of industries, Karen transitioned into the software engineering industry to create tools that transform lives.",
+  "personal": "As a photography enthusiast, Karen enjoys traveling, especially to Southeast Asia where the landscapes are drastic and the flavor profiles are fragrantly complex.  You can find her hiking or playing fetch with her dog during the Seattle summers.  And, this winter, you just might be able to catch her learning to snowboard on the bunny slopes.",
   "projects": [
     {
       "title": "Capsule Curate",
@@ -87,6 +87,20 @@ DATA = {
   ],
   "skills": ["React.js", "React-Redux", "JavaScript", "HTML/CSS", "Ruby on Rails", "SQL", "PostgreSQL", "MATLAB", "Wireframing and Mockups", "Adobe CS", "CAD (Solidworks)", "LabView", "Git/GitHub", "Gantt Charts", "Risk Analysis", "Agile Methodology", "Design of Experiements"],
   "experience": [
+    {
+      "title": "Full Stack Software Engineer",
+      "company": "Nordstrom Inc",
+      "logo": "./images/nordstrom.png",
+      "location": "Seattle, WA",
+      "dates": "2019-Present",
+      "summary": "Full Stack Engineer on the Customer Account Management team that handled customer authentication for Nordstrom.com and other brands under the JWN umbrella.",
+      "bullets": [
+        "Redesigned, developed, and owned an internal tool that decreased on-call engineering hours spent on customer support from 40+ hrs a week to less than 10 hrs a week.",
+        "Built an identity provider service in Java Spring Boot following RESTful API guidelines for over 20 million JWN customers.",
+        "Developed and maintained React components for Nordstrom.com along with six Java Microservices to continually support business and customer requirements.",
+        "Drove and collaborated with multiple engineering teams to introduce a change to service-to-service calls that reduced latency by 35% when customers sign in.",
+      ]
+    },
     {
       "title": "Product Engineer",
       "company": "Talking Rain Beverage Company",
