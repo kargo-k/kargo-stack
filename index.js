@@ -2,7 +2,7 @@ DATA = {
   "name": "Karen Go",
   "title": "Software Engineer",
   "location": "Seattle, WA",
-  "about": "Karen is a full stack software engineer with a natural curiosity and drive for results. With 10 years of product development experience in a mix of industries, Karen transitioned into the software engineering industry to create tools that transform lives.",
+  "about": "Karen is a full stack software engineer with a natural curiosity and drive for results. With 10 years of product development experience in a mix of industries, Karen now works in the software engineering field to create tools that transform how we live.",
   "personal": "As a photography enthusiast, Karen enjoys traveling, especially to Southeast Asia where the landscapes are drastic and the flavor profiles are fragrantly complex.  You can find her hiking or playing fetch with her dog during the Seattle summers.  And, this winter, you just might be able to catch her learning to snowboard on the bunny slopes.",
   "projects": [
     {
