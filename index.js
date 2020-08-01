@@ -95,10 +95,10 @@ DATA = {
       "dates": "2019-Present",
       "summary": "Full Stack Engineer on the Customer Account Management team that handled customer authentication for Nordstrom.com and other brands under the JWN umbrella.",
       "bullets": [
-        "Redesigned, developed, and owned an internal tool that decreased on-call engineering hours spent on customer support from 40+ hrs a week to less than 10 hrs a week.",
-        "Built an identity provider service in Java Spring Boot following RESTful API guidelines for millions of JWN customers.",
-        "Developed and maintained React components for Nordstrom.com along with six Java Microservices to continually support business and customer requirements.",
-        "Drove and collaborated with multiple engineering teams to introduce a change to service-to-service calls that reduced latency by 35% when customers sign in.",
+        "Drove and collaborated with multiple engineering teams to introduce a change to service-to-service calls that reduced latency by 35% when customers sign in",
+        "Redesigned, developed, and owned an internal tool that decreased on-call engineering hours spent on customer support from 40+ hrs a week to less than 10 hrs a week",
+        "Contributed to design and construction for an identity provider service in Java Spring Boot following RESTful API guidelines for over 20 million customers capable of handling loads up to 350 RPS",
+        "Developed React components and state shards for Nordstrom.com along with six Java Microservices to support customer authentication and accounts",
       ]
     },
     {
@@ -109,9 +109,9 @@ DATA = {
       "dates": "2017-2019",
       "summary": "Focused on ideation and technical development for new product lines.",
       "bullets": [
-        "Iterated on product concepts by analyzing consumer data, developing launch timelines, and collecting feedback from test markets",
-        "Streamlined cross-functional efficiencies between Supply Chain, R&D, Brand, and Contract Manufacturers by creating a clear and concise workflow",
-        "Aligned internal technical teams to validate technical feasibility of new products"
+        "Iterated on product concepts by analyzing consumer data, developing launch timelines, collecting feedback from test markets, and translated results to the R&D team",
+        "Streamlined cross-functional efficiencies between Supply Chain, R&D, Brand, and Contract Manufacturers by creating a clear and concise workflow that reduced erroneous trial and production runs by 70%",
+        "Aligned internal technical teams to validate technical feasibility of new products and delivered proof of concepts to the executive leadership team"
       ]
     },
     {
@@ -124,7 +124,7 @@ DATA = {
       "bullets": [
         "Led overall product strategy development for a virtual wellness clinic with a team of 4 software engineers and communicated progress to stakeholders weekly",
         "Gathered and defined product requirements and designed user interface for rapid prototyping wireframes and mockups",
-        "Streamlined business operations and personnel responsibilities to save the company over 40 man-hours a week, which increased case throughput by 25%"
+        "Streamlined business operations and personnel responsibilities to save the company over 40 work-hours a week, which increased case throughput by 25%"
       ]
     },
     {
