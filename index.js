@@ -79,11 +79,11 @@ DATA = {
       "course": "Biomedical Engineering, BSc",
       "dates": "May 2010"
     },
-    {
-      "school": "Flatiron School",
-      "course": "Software Engineering Immersive",
-      "dates": "Sept 2019"
-    }
+//     {
+//       "school": "Flatiron School",
+//       "course": "Software Engineering Immersive",
+//       "dates": "Sept 2019"
+//     }
   ],
   "skills": ["React.js", "React-Redux", "JavaScript", "HTML/CSS", "Ruby on Rails", "SQL", "PostgreSQL", "MATLAB", "Wireframing and Mockups", "Adobe CS", "CAD (Solidworks)", "LabView", "Git/GitHub", "Gantt Charts", "Risk Analysis", "Agile Methodology", "Design of Experiements"],
   "experience": [
