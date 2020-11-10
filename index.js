@@ -96,9 +96,10 @@ DATA = {
       "summary": "Full Stack Engineer on the Customer Account Management team that handled customer authentication for Nordstrom.com and other brands under the JWN umbrella.",
       "bullets": [
         "Drove and collaborated with multiple engineering teams to introduce a change to service-to-service calls that reduced latency by 35% when customers sign in",
-        "Redesigned, developed, and owned an internal tool that decreased on-call engineering hours spent on customer support from 40+ hrs a week to less than 10 hrs a week",
-        "Contributed to design and construction for an identity provider service in Java Spring Boot following RESTful API guidelines for over 20 million customers capable of handling loads up to 350 RPS",
-        "Developed React components and state shards for Nordstrom.com along with six Java Microservices to support customer authentication and accounts",
+        "Redesigned, developed, and owned an internal tool that decreased on-call engineering hours spent on customer support from 40+ hrs a week to less than 4 hrs a week",
+        "Contributed to design and construction for an identity provider service in Java Spring Boot following RESTful API guidelines for over 20 million customers capable of handling loads up to 350 requests per second",
+        "Developed React components and state shards for Nordstrom.com along with six Java/Golang cloud microservices to support customer authentication and accounts",
+        "Designed and implemented a solution to conduct a database migration of 60+ million records from MySQL to DynamoDB with zero service downtime using AWS S3 and Lambda"
       ]
     },
     {
